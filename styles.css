@@ -21,7 +21,7 @@ body{
     inset: 0 0 0;
     bottom: unset;
     width: 100%;
-    height: 70px;
+    height: 100px;
     background-color: #2C3639;
     display: flex;
     align-items: center;
@@ -31,7 +31,7 @@ body{
 
 #heading{
     color: rgb(172, 177, 177);
-    font-size: 1.55rem;
+    font-size: 3rem;
     text-transform: capitalize;
 }
 
@@ -44,10 +44,10 @@ body{
 }
 
 .nav-button{
-    font-size: 0.7rem;
-    width: 70px;
-    height: 30px;
-    margin-left: 10px;
+    font-size: 1.2rem;
+    width: 140px;
+    height: 49px;
+    margin-left: 15px;
     background-color: #A27B5C;
     border: none;
     border-radius: 5px;
@@ -62,9 +62,9 @@ body{
 
 #page-content{
     position: absolute;
-    min-height: 87.5vh;
+    min-height: 90vh;
     width: 100%;
-    top: 70px;
+    top: 100px;
 }
 #books-container{
     width: 100%;
@@ -76,24 +76,21 @@ body{
 }
 
 .book{
-    width: 140px;
-    height: 220px;
+    width: 240px;
+    height: 350px;
     background-color: #DCD7C9;
     border-radius: 7px;
     padding: 4px;
-    margin: 0 10px 10px 0;
+    margin: 0 20px 20px 0;
     display: flex;
+    flex-flow: column;
     align-items: center;
     justify-content: center;
-    opacity: 0.2;
-    transition: 1.5s;
+    /* opacity: 0.2; */
     cursor: pointer;
 }
 
-.book:hover{
-    opacity: .8;
 
-}
 .book > i{
     font-size: 3rem;
 }
@@ -104,19 +101,21 @@ body{
     display: flex;
     flex-flow: column wrap;
     align-items: center;
-    justify-content: space-around;
+    justify-content: flex-start;
     border-radius: 7px 7px 0 0 ;
 }
 
 .book-added > p{
     display: block;
-    font-size: 0.85rem;
+    margin-bottom: 40px;
+    font-size: 1.2rem;
     color: #A27B5C;
     text-align: center;
 }
 .book-added > .title{
     color: #ffd35b;
-    font-size: 1.2rem;
+    font-size: 2rem;
+    margin: 20px 0 100px 0;
 }
 p > span {
     color: #F9E4D4;
@@ -135,6 +134,7 @@ p > span {
     height: 100%;
     border: none;
     cursor: pointer;
+    font-size: 1.3rem;
 }
 
 .book-buttons>button:first-child{
@@ -205,8 +205,8 @@ p > span {
     width: 0;
     background-color: #EDEDED;
     position: fixed;
-    top: 0;
     z-index: 0;
+    margin-top: 30px;
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -375,16 +375,48 @@ input[type="radio"]{
 @media(max-width: 1200px){
     #header{
         width: 100%;
-        height: 90px;
         flex-flow: column;
+    }
+
+    #heading{
+        font-size: 1.5rem;
     }
     #nav-container{
         width: 100%;
         justify-content: center;
     }
+
+    .nav-button{
+        font-size: 0.9rem;
+        width: 100px;
+        height: 40px;
+    }
+
     #page-content{
-        min-height: 91vh;
-        top: 90px;
+        min-height: 90vh;
+        top: 110px;
+    }
+
+    .book{
+        width: 120px;
+        height: 170px;
+    }
+    
+    .book-added > p{
+        margin-bottom: 10px;
+        font-size: 0.7rem;
+    }
+    .book-added > .title{
+        font-size: 1.2rem;
+        margin: 10px 0 40px 0;
+    }
+
+    .book-added p:last-child{
+        margin-top: 13px;
+    }
+
+    .book-buttons > button{
+        font-size: 0.8rem;
     }
     
 }
