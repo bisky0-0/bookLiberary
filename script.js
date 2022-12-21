@@ -5,7 +5,7 @@ let cancleBtn = document.getElementById("cancle");
 function getForm() {
     form.style.cssText = `top: 80px; 
     z-index: 10;
-    width:260px;
+    width:270px;
     height: 420px;
     display: flex;
     align-items: center;
