@@ -1,0 +1,390 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'lato', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Lato:400,500,600,700&display=swap');
+
+body{
+    position: relative;
+    background-color: #3F4E4F;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#header{
+    position: fixed;
+    inset: 0 0 0;
+    bottom: unset;
+    width: 100%;
+    height: 70px;
+    background-color: #2C3639;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 2;
+}
+
+#heading{
+    color: rgb(172, 177, 177);
+    font-size: 1.55rem;
+    text-transform: capitalize;
+}
+
+#nav-container{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 10px;
+}
+
+.nav-button{
+    font-size: 0.7rem;
+    width: 70px;
+    height: 30px;
+    margin-left: 10px;
+    background-color: #A27B5C;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.nav-button:hover, .nav-button:focus{
+    background-color: #e4985a;
+}
+
+#page-content{
+    position: absolute;
+    min-height: 87.5vh;
+    width: 100%;
+    top: 70px;
+}
+#books-container{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-flow: row wrap;
+    padding: 20px 0 20px 10px;
+}
+
+.book{
+    width: 140px;
+    height: 220px;
+    background-color: #DCD7C9;
+    border-radius: 7px;
+    padding: 4px;
+    margin: 0 10px 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.2;
+    transition: 1.5s;
+    cursor: pointer;
+}
+
+.book:hover{
+    opacity: .8;
+
+}
+.book > i{
+    font-size: 3rem;
+}
+.book-added{
+    width: 100%;
+    height: 89%;
+    background-color: #361500;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 7px 7px 0 0 ;
+}
+
+.book-added > p{
+    display: block;
+    font-size: 0.85rem;
+    color: #A27B5C;
+    text-align: center;
+}
+.book-added > .title{
+    color: #ffd35b;
+    font-size: 1.2rem;
+}
+p > span {
+    color: #F9E4D4;
+}
+.book-buttons{
+    width: 100%;
+    height: 11%;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.book-buttons > button{
+    width: calc(99% / 2);
+    height: 100%;
+    border: none;
+    cursor: pointer;
+}
+
+.book-buttons>button:first-child{
+    border-radius: 0 0 0 7px;
+}
+
+.book-buttons>button:last-child{
+    border-radius: 0 0 7px 0;
+}
+.remove, .edit{
+    background-color: #e7a36f;
+   
+}
+
+.fashoin{
+    background-color: #F6CAC9;
+}
+
+.fashoin .title{
+    color: #834655;
+}
+
+.fashion-remove, .fashion-edit{
+    background-color: #9F5069;
+    color: #fff;
+}
+
+.fashoin > p{
+    color: #000;
+}
+
+.fashoin > p span{
+    color: #9F5069;
+}
+
+.philo{
+    background-color: #30475E;
+}
+
+.philo .title{
+    color: #E7DEC8;
+}
+
+.philo-remove, .philo-edit{
+    background-color: #CBAF87;
+}
+
+.adventure{
+    background-color: #00303F;
+}
+
+.adventure > p span{
+    color: #CAE4DB;
+}
+
+.adventure .title{
+    color: #ad6200;
+}
+
+.adventure-remove, .adventure-edit{
+    background-color: #CAE4DB;
+    color: #b1550f;
+}
+
+
+#form{
+    height: 0;
+    width: 0;
+    background-color: #EDEDED;
+    position: fixed;
+    top: 0;
+    z-index: 0;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-flow: column;
+    padding: 10px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    transition: 1.5s;
+}
+
+form > h2{
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #4f200e;
+    position: relative;
+    left: -15px;
+    top: 10px;
+}
+
+form >h2::after{
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: #4f200e;
+    position: absolute;
+    top: 23px;
+    left: 0;
+    border-radius: 4px;
+}
+
+#form > #cancle{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+#cancle > i{
+    font-size: 1.5rem;
+    transform: rotate(45deg);
+    color: #4F0E0E;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#cancle > i:hover{
+    font-size: 1.7rem;
+    color: #ff0000;
+}
+
+label{
+    display: flex;
+    align-items: flex-start;
+    flex-flow: column;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 17px;
+    font-size: 0.9rem;
+    color: #4f0e0edc;
+}
+
+input[type="text"], input[type= "number"], select{
+    width: 100%;
+    border: none;
+    outline: none;
+    height: 27px;
+    padding: 2px 10px 2px 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    /* border-bottom: 1px solid #ffbc89;
+    border-top: 1px solid #ffbc89; */
+    border-left: 2px solid #b1550f;
+    border-right: 2px solid #b1550f;
+    font-size: 0.7rem;
+}
+
+select{
+    padding-left: 5px;
+    cursor: pointer;
+}
+
+#special-label{
+    color: #001e27;
+    align-items: center;
+    justify-content: center;
+}
+
+.radio-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-flow: row wrap;
+}
+
+.radio{
+    width: calc(80% / 2);
+    height: 26px;
+    background-color: #b1550f;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.radio:hover, .radio:focus{
+    background-color: #ee8433;
+}
+
+input[type="radio"]{
+    accent-color: #b1550f;
+    vertical-align: middle;
+    border-radius: 20%;
+    margin: 3px 39px 1.1px 2px;
+    width: 20px;
+    height: 20px;
+}
+
+#no{
+    accent-color: #bc1111;
+}
+#no-btn:hover, #no-btn:focus{
+    background-color: #bc1111;
+}
+
+#add-the-book{
+    width: 140px;
+    height: 30px;
+    background-color: #4f200e;
+    color: #fff;
+    border-radius:10px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 15px;
+}
+
+#add-the-book:hover, #add-the-book:focus{
+    background-color: #803800;
+    border: 1px solid #300505;
+}
+
+
+#footer{
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    bottom: 0;
+    display: flex;
+    background-color: #3e4a4b;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+    color: #fff;
+}
+
+#footer a{
+    color: #faeab5;
+    text-decoration: none;
+}
+
+@media(max-width: 1200px){
+    #header{
+        width: 100%;
+        height: 90px;
+        flex-flow: column;
+    }
+    #nav-container{
+        width: 100%;
+        justify-content: center;
+    }
+    #page-content{
+        min-height: 91vh;
+        top: 90px;
+    }
+    
+}

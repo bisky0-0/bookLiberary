@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,">
+    <title>📕 book liberary</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1 id="heading">your books liberary <i class="fa-solid fa-book-open"></i></h1>
+        <nav id="nav-container">
+            <button class="nav-button" id="add-btn">add book</button>
+            <button class="nav-button" id="info">about us</button>
+            <button class="nav-button" id="contact">contact us</button>
+        </nav>
+    </header>
+
+    <form action="_get" id="form">
+        <h2>add the book you want</h2>
+        <div id="cancle" type="button"> <i class="fa-sharp fa-solid fa-plus"></i></div>
+        <label for="form-title">title
+            <input type="text" name="form-title" id="form-title">
+        </label>
+        <label for="form-author">author
+            <input type="text" name="form-author" id="form-author">
+        </label>
+
+        <label for="form-category">select category
+            <select name="form-category" id="form-category">
+                <option value="" selected disabled id="selected"></option>
+                <option value="horror">horror</option>
+                <option value="fashion">fashion</option>
+                <option value="philosophy">philosophy</option>
+                <option value="adventure">adventure</option>
+            </select>
+        </label>
+        <label for="form-pages">pages number
+            <input type="number" name="form-pages" id="form-pages">
+        </label>
+
+        <label for="form-read" id="special-label">did you read it ?
+            <div class="radio-container">
+                <button class="radio" type="button" id="yes-btn"><input type="radio" name="form-read" id="yea"
+                        checked>yes</button>
+                <button class="radio" type="button" id="no-btn"><input type="radio" name="form-read" id="no">no</button>
+            </div>
+        </label>
+
+        <button type="submit" id="add-the-book">add the book <i class="fa-sharp fa-solid fa-bookmark"></i></button>
+    </form>
+    <div id="page-content">
+        <div id="books-container">
+            <div class="book">
+                <i class="fa-solid fa-book-open"></i>
+            </div>
+        </div>
+        <footer id="footer">
+            <p id="info">books liberary built by <a href="https://github.com/bisky0-0">bisky krauger</a> &copy;
+                <script>document.write(new Date().getFullYear());</script>
+            </p>
+        </footer>
+    </div>
+    <script src="https://kit.fontawesome.com/292ed01dd7.js" crossorigin="anonymous"></script>
+</body>
+<script src="script.js"></script>
+
+</html>
+
+
+<!-- 
+<div class="book">
+    <div class="book-added hororr">
+        <p class="title">death</p>
+        <p>written by<br>
+            <span class="author">God</span>
+        </p>
+        <p class="pages"><span id="page-num">200</span> pages <span class="read"><span
+                    class="pages-readed">0</span></span> read</p>
+
+    </div>
+    <div class="book-buttons">
+        <button class="remove">remove</button>
+        <button class="edit">edit</button>
+    </div>
+</div>
+
+<div class="book">
+    <div class="book-added fashoin">
+        <p class="title">fashion</p>
+        <p>written by<br>
+            <span class="author">amina shelpaia</span>
+        </p>
+        <p class="pages"><span id="page-num">200</span> pages <span class="read"><span
+                    class="pages-readed">0</span></span> read</p>
+
+    </div>
+    <div class="book-buttons">
+        <button class="fashion-remove">remove</button>
+        <button class="fashion-edit">edit</button>
+    </div>
+</div>
+
+
+<div class="book">
+    <div class="book-added philo">
+        <p class="title">philosphy</p>
+        <p>written by<br>
+            <span class="author">nzsha</span>
+        </p>
+        <p class="pages"><span id="page-num">200</span> pages <span class="read"><span
+                    class="pages-readed">0</span></span> read</p>
+
+    </div>
+    <div class="book-buttons">
+        <button class="philo-remove">remove</button>
+        <button class="philo-edit">edit</button>
+    </div>
+</div>
+
+<div class="book">
+    <div class="book-added adventure">
+        <p class="title">journey to the</p>
+        <p>written by<br>
+            <span class="author">unknown</span>
+        </p>
+        <p class="pages"><span id="page-num">200</span> pages <span class="read"><span
+                    class="pages-readed">0</span></span> read</p>
+
+    </div>
+    <div class="book-buttons">
+        <button class="adventure-remove">remove</button>
+        <button class="adventure-edit">edit</button>
+    </div>
+</div> -->
