@@ -398,21 +398,22 @@ input[type="radio"]{
     }
 
     .book{
-        width: 140px;
-        height: 200px;
+        width: 340px;
+        height: 400px;
+        margin: 0 0 20px 0;
     }
     
     .book-added > p{
         margin-bottom: 10px;
-        font-size: 0.7rem;
+        font-size: 1.2rem;
     }
     .book-added > .title{
-        font-size: 1.2rem;
-        margin: 10px 0 40px 0;
+        font-size: 2rem;
+        margin: 20px 0 70px 0;
     }
 
     .book-added p:last-child{
-        margin-top: 7px;
+        margin-top: 20px;
     }
 
     .book-buttons > button{
