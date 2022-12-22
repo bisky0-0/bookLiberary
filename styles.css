@@ -394,12 +394,12 @@ input[type="radio"]{
 
     #page-content{
         min-height: 90vh;
-        top: 110px;
+        top: 120px;
     }
 
     .book{
-        width: 130px;
-        height: 190px;
+        width: 140px;
+        height: 200px;
     }
     
     .book-added > p{
