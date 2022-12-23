@@ -212,7 +212,7 @@ p > span {
     height: 0;
     width: 0;
     background-color: #EDEDED;
-    position: fixed;
+    position: sticky;
     z-index: 0;
     margin-top: 30px;
     border-radius: 10px;

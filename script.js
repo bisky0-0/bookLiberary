@@ -6,7 +6,8 @@ let removealeBook = document.getElementById("removable");
 
 //add the form 
 function getForm() {
-    form.style.cssText = `top: 100px; 
+    form.style.cssText = `
+    margin-top: 100px;
     z-index: 10;
     width:470px;
     height: 800px;
