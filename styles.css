@@ -72,13 +72,13 @@ body{
     align-items: flex-start;
     justify-content: center;
     flex-flow: row wrap;
-    padding: 20px 0 20px 10px;
+    padding: 20px 40px 50px 40px;
 }
 
 .book{
     width: 240px;
     height: 350px;
-    background-color: #DCD7C9;
+    background-color: #ffffff;
     border-radius: 7px;
     padding: 4px;
     margin: 0 20px 20px 0;
@@ -86,7 +86,6 @@ body{
     flex-flow: column;
     align-items: center;
     justify-content: center;
-    /* opacity: 0.2; */
     cursor: pointer;
 }
 
@@ -112,10 +111,14 @@ body{
     color: #A27B5C;
     text-align: center;
 }
+
+.book-added > p:last-child{
+    margin-bottom: 10px;
+}
 .book-added > .title{
     color: #ffd35b;
     font-size: 2rem;
-    margin: 20px 0 100px 0;
+    margin: 20px 0 55px 0;
 }
 p > span {
     color: #F9E4D4;
@@ -144,9 +147,9 @@ p > span {
 .book-buttons>button:last-child{
     border-radius: 0 0 7px 0;
 }
-.remove, .edit{
+
+.horror-remove, .horror-edit, .philosophy-remove, .philosophy-edit{
     background-color: #e7a36f;
-   
 }
 
 .fashoin{
@@ -159,6 +162,11 @@ p > span {
 
 .fashion-remove, .fashion-edit{
     background-color: #9F5069;
+    color: #fff;
+}
+
+.fashion-remove:hover, .philosophy-remove:hover, .horror-remove:hover, .adventure-remove:hover{
+    background-color: #dc1313;
     color: #fff;
 }
 
@@ -178,8 +186,8 @@ p > span {
     color: #E7DEC8;
 }
 
-.philo-remove, .philo-edit{
-    background-color: #CBAF87;
+.philo > p span{
+    color: #CAE4DB;
 }
 
 .adventure{
@@ -212,28 +220,28 @@ p > span {
     align-items: center;
     justify-content: flex-start;
     flex-flow: column;
-    padding: 10px;
+    padding: 15px;
     overflow-x: hidden;
     overflow-y: hidden;
     transition: 1.5s;
 }
 
 form > h2{
-    font-size: 1.2rem;
-    margin-bottom: 30px;
+    font-size: 2.3rem;
+    margin-bottom: 50px;
     color: #4f200e;
     position: relative;
     left: -15px;
-    top: 10px;
+    top: 20px;
 }
 
 form >h2::after{
     content: "";
     width: 100%;
-    height: 4px;
+    height: 7px;
     background-color: #4f200e;
     position: absolute;
-    top: 23px;
+    top: 39px;
     left: 0;
     border-radius: 4px;
 }
@@ -245,7 +253,7 @@ form >h2::after{
 }
 
 #cancle > i{
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     transform: rotate(45deg);
     color: #4F0E0E;
     cursor: pointer;
@@ -253,7 +261,7 @@ form >h2::after{
 }
 
 #cancle > i:hover{
-    font-size: 1.7rem;
+    font-size: 2.7rem;
     color: #ff0000;
 }
 
@@ -263,8 +271,8 @@ label{
     flex-flow: column;
     justify-content: space-between;
     width: 100%;
-    margin-bottom: 17px;
-    font-size: 0.9rem;
+    margin-bottom:27px;
+    font-size: 1.6rem;
     color: #4f0e0edc;
 }
 
@@ -272,15 +280,13 @@ input[type="text"], input[type= "number"], select{
     width: 100%;
     border: none;
     outline: none;
-    height: 27px;
-    padding: 2px 10px 2px 10px;
+    height: 47px;
+    padding: 4px 10px 4px 10px;
     border-radius: 5px;
     background-color: #fff;
-    /* border-bottom: 1px solid #ffbc89;
-    border-top: 1px solid #ffbc89; */
     border-left: 2px solid #b1550f;
     border-right: 2px solid #b1550f;
-    font-size: 0.7rem;
+    font-size: 1.2rem;
 }
 
 select{
@@ -289,6 +295,8 @@ select{
 }
 
 #special-label{
+    margin-top: 20px;
+    font-size: 2rem;
     color: #001e27;
     align-items: center;
     justify-content: center;
@@ -296,6 +304,7 @@ select{
 
 .radio-container{
     width: 100%;
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -304,7 +313,7 @@ select{
 
 .radio{
     width: calc(80% / 2);
-    height: 26px;
+    height: 46px;
     background-color: #b1550f;
     color: #fff;
     display: flex;
@@ -314,38 +323,40 @@ select{
     border: none;
     padding: 5px;
     cursor: pointer;
+    font-size: 1.5rem;
 }
 
 .radio:hover, .radio:focus{
     background-color: #ee8433;
+    box-shadow: 1px 1px 10px  #e48e9e;
 }
 
 input[type="radio"]{
     accent-color: #b1550f;
     vertical-align: middle;
-    border-radius: 20%;
     margin: 3px 39px 1.1px 2px;
-    width: 20px;
-    height: 20px;
+    width: 27px;
+    height: 27px;
 }
 
 #no{
     accent-color: #bc1111;
 }
 #no-btn:hover, #no-btn:focus{
-    background-color: #bc1111;
+    background-color: #be0404;
 }
 
 #add-the-book{
-    width: 140px;
-    height: 30px;
+    width: 230px;
+    height: 60px;
+    font-size: 1.6rem;
     background-color: #4f200e;
     color: #fff;
     border-radius:10px;
     border: none;
     cursor: pointer;
     position: absolute;
-    bottom: 15px;
+    bottom: 35px;
 }
 
 #add-the-book:hover, #add-the-book:focus{
@@ -372,7 +383,7 @@ input[type="radio"]{
     text-decoration: none;
 }
 
-@media(max-width: 1200px){
+@media(max-width: 900px){
     #header{
         width: 100%;
         flex-flow: column;
@@ -420,4 +431,21 @@ input[type="radio"]{
         font-size: 0.8rem;
     }
     
+    form > h2{
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+    left: -10px;
+    top: 10px;
+    }
+
+    form >h2::after{
+        height: 5px;
+        top: 30px;
+    }
+
+
+label{
+    margin-bottom:3vh;
+    font-size: 1.3rem;
+}
 }
