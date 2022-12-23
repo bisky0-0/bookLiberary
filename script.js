@@ -10,7 +10,6 @@ function getForm() {
     z-index: 10;
     width:470px;
     height: 800px;
-    
     flex-flow: column;`;
     removealeBook.style.display = "none";
 }
